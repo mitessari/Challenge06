@@ -3,12 +3,13 @@
 var start = document.querySelector("#button");
 let timer = document.querySelector(".time");
 let userScore = timer; 
-var myQuestions = [{question: "What is 10/2?", answers: {a: '3', b: '5', c: '115'}, correctAnswer: 'b'},
-	{ question: "What is 30/3?", answers: { a: '3', b: '5', c: '10'}, correctAnswer: 'c'}];
+var myQuestions = [{question: "What is 10/2?", answers: 'a: 3, b: 5, c: 115', correctAnswer: 'b'},
+	{ question: "What is 30/3?", answers: 'a: 3, b: 5, c: 10', correctAnswer: 'c'}];
 
     let currentQuestion = 0;
-
-
+// CSS
+var questionStyle = document.getElementById('question-title');
+questionStyle.setAttribute("style", "font-size: 50px; font-weight: bold ");
 //let intervalId = setInterval;
 
 function setTime (){
@@ -33,6 +34,7 @@ function displayQuestion(){
 
 }
 displayQuestion();
+
 
 start.addEventListener("click", function(){
     setTime();
